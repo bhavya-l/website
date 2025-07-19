@@ -1,14 +1,23 @@
 import React from 'react';
 import '../styles/Card.css';
+import '../styles/Landing.css';
 
 const LandingPage = () => {
+  const scrollToSection = (id) => {
+  const element = document.getElementById(id);
+  if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="card" style={{width:'1143px', height:'572px'}}>
+    <div id="Landing" className="card" style={{width:'1143px', height:'1301px'}}>
       <div className="card-container">
         <div className="card-nav">
-          <p>education</p>
-          <p>experience</p>
-          <p>projects</p>
+          <p onClick={() => scrollToSection('education')}>about me</p>
+          <p onClick={() => scrollToSection('education')}>education</p>
+          <p onClick={() => scrollToSection('experience')}>experience</p>
+          <p onClick={() => scrollToSection('projects')}>projects</p>
         </div>
 
         <div className="card-divider" />
