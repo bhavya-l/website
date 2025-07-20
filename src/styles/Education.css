@@ -65,7 +65,7 @@
 
 .about-section {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
   margin-bottom: 2rem;
 }

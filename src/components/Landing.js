@@ -17,7 +17,6 @@ const LandingPage = () => {
           <p onClick={() => scrollToSection('education')}>about me</p>
           <p onClick={() => scrollToSection('education')}>education</p>
           <p onClick={() => scrollToSection('experience')}>experience</p>
-          <p onClick={() => scrollToSection('projects')}>projects</p>
         </div>
 
         <div className="card-divider" />

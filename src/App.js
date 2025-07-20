@@ -9,7 +9,6 @@ function App() {
       <LandingPage />
       <EducationPage />
       <ExperiencePage />
-      
     </div>
   );
 }

@@ -3,6 +3,7 @@ import '../styles/Card.css';
 import '../styles/Education.css'; 
 import waterlooLogo from '../assets/waterlooLogo.png';
 import profilePic from '../assets/profilePic.png';
+import TiltedCard from './TiltledCard.js';
 
 const EducationPage = () => {
   return (
@@ -10,7 +11,20 @@ const EducationPage = () => {
       <div>
             <div className="card-title">About Me</div>
             <div className="about-section">
-            <img src={profilePic} alt="Profile Pic" className="profile-image" />
+              <TiltedCard
+            imageSrc={profilePic}
+            altText="Me!"
+            captionText="Me!"
+            containerHeight="300px"
+            containerWidth="300px"
+            imageHeight="300px"
+            imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.0}
+            showMobileWarning={false}
+            showTooltip={false}
+            displayOverlayContent={true}
+            />
             <p className="card-description" style={{fontSize: '24px'}}>
               Hello, my name is Bhavya and I am a developer who enjoys building thoughtful, user-focused software. 
               I've worked across the stack, from writing Python APIs and integrating monitoring tools to designing 
@@ -28,8 +42,9 @@ const EducationPage = () => {
               <p className="sub-heading">Bachelor of Computer Science (Sept 2020 - June 2025)</p>
             </div>
           </div>
-          <div className="heading-1">
-            <h3>Relevant Courses:</h3>
+          <div className="heading-1" style={{paddingLeft: '4rem'}}>
+            <h3 style={{marginTop: '3rem'}}>Relevant Courses:</h3>
+            <div style={{display: 'flex', flexDirection: 'row', gap: '7rem'}}>
             <ul>
               <li>Application Development</li>
               <li>Intro to Database Management</li>
@@ -42,6 +57,7 @@ const EducationPage = () => {
               <li>Foundations of Sequential Programs</li>
               <li>Object-Oriented Software Development</li>
             </ul>
+            </div>
           </div>  
       </div>
     </div>
