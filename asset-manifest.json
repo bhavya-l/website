@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/website/static/css/main.f351ddf7.css",
+    "main.js": "/website/static/js/main.132cce0f.js",
+    "static/js/453.dff87da4.chunk.js": "/website/static/js/453.dff87da4.chunk.js",
+    "static/media/profilePic.png": "/website/static/media/profilePic.3a16fc854289c79e2f3a.png",
+    "static/media/waterlooLogo.png": "/website/static/media/waterlooLogo.7fc9f559dd0627edd9f2.png",
+    "index.html": "/website/index.html",
+    "main.f351ddf7.css.map": "/website/static/css/main.f351ddf7.css.map",
+    "main.132cce0f.js.map": "/website/static/js/main.132cce0f.js.map",
+    "453.dff87da4.chunk.js.map": "/website/static/js/453.dff87da4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f351ddf7.css",
+    "static/js/main.132cce0f.js"
+  ]
+}
