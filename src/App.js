@@ -20,6 +20,8 @@ function App() {
     >
       <Dither mouseRadius={0.1}>
         <LandingPage />
+        <EducationPage />
+        <ExperiencePage />
       </Dither>
     </div>
   );
