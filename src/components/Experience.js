@@ -7,7 +7,7 @@ import ttc from '../assets/ttc.png';
 import dbis from '../assets/dbis.png';
 import syngli from '../assets/syngli.png';
 
-const experiences = [
+	const experiences = [
   {
     company: 'Vivid Seats',
     title: 'Software Engineer',
