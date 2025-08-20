@@ -1,0 +1,36 @@
+.navbar {
+  background-color: #2A9D8F;
+  height: 87px;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 70px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.nav-links li:last-child {
+  position: absolute;
+  right: 40px;
+}

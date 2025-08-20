@@ -1,0 +1,37 @@
+.card {
+  background-color: #FDF6E3;
+  border-radius: 10px;
+  z-index: 1000;
+  width: auto;
+  height: auto;
+}
+
+.card-content {
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-family: "Righteous";
+  color:#E76F51;
+  font-weight: 700;
+  font-size: 96px;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+}
+
+.card-description {
+  font-size: 36px;
+  max-width: 634px;
+}
+
+.p-button {
+  background-color: #E76F51;
+  color: white;
+  border-radius: 10px !important;
+  padding: 8px 32px !important;
+}
