@@ -1,68 +1,84 @@
 import React from "react";
-import "../styles/Card.css";
+import "../styles/Core.css";
 import "../styles/Landing.css";
+import { motion } from "framer-motion";
 
 const LandingPage = () => {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <div
+    <motion.div
       id="Landing"
       className="card"
-      style={{ width: "1143px", height: "1301px" }}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
     >
-      <div className="card-container">
-        <div className="card-nav">
-          <p onClick={() => scrollToSection("education")}>about me</p>
-          <p onClick={() => scrollToSection("education")}>education</p>
-          <p onClick={() => scrollToSection("experience")}>experience</p>
-        </div>
+      <motion.div
+        className="card-content"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        <motion.div
+          id="titleName"
+          className="card-title"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
+          Bhavya Lamba
+        </motion.div>
 
-        <div className="card-divider" />
-
-        <div className="card-content">
-          <h1 className="card-name">Bhavya Lamba</h1>
-          <p className="card-description">
-            Software developer and recent graduate from the University of
-            Waterloo, with a passion for learning and solving complex
-            challenges.
-          </p>
-
-          <div className="card-buttons">
-            <a href="/resume.pdf" download className="card-link-button">
-              resume
-            </a>
-            <a
-              href="https://github.com/bhavya-l"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-link-button"
-            >
-              github
-            </a>
-            <a
-              href="https://www.linkedin.com/in/bhavyalamba"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-link-button"
-            >
-              linkedin
-            </a>
-            <a
-              href="mailto:bhavyalamba56@gmail.com"
-              className="card-link-button"
-            >
-              contact me
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+        <motion.div
+          id="summary"
+          className="card-description"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+        >
+          <span>
+            <strong>Software Developer</strong> and recent graduate from the
+            <em> University of Waterloo</em>, with a passion for learning
+            and solving complex challenges.
+          </span>
+        </motion.div>
+        <motion.div
+          className="card-buttons"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+        >
+          <motion.a
+            href="/resume.pdf"
+            download
+            className="p-button"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Resume
+          </motion.a>
+          <motion.a
+            href="https://github.com/bhavya-l"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="s-button"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Github
+          </motion.a>
+          <motion.a
+            href="https://www.linkedin.com/in/bhavyalamba"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="s-button"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Linkedin
+          </motion.a>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

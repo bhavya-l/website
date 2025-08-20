@@ -32,29 +32,6 @@
   margin: 0;
 }
 
-.card-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-.card-link-button {
-  background-color: #252422;
-  color: #FFFCF2;
-  text-decoration: none;
-  padding: 0.4rem 0.8rem;
-  font-size: 24px;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Anonymous Pro', serif;
-  transition: background-color 0.2s ease;
-}
-
-.card-link-button:hover {
-  background-color: #444;
-}
-
 .card-nav p {
   cursor: pointer;
   color: #252422;

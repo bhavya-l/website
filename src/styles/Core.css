@@ -1,0 +1,88 @@
+.card {
+  border-radius: 10px;
+  z-index: 1000;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.card-content {
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-family: "Righteous";
+  color:#E76F51;
+  font-weight: 700;
+  font-size: 96px;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+}
+
+.card-subheading {
+  font-family: "Pacifico";
+  font-size: 64px;
+  color: #E76F51;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+}
+
+.card-description {
+  font-family: "Roboto";
+  font-size: 36px;
+  max-width: 960px;
+  color: #3D2B1F;
+  font-family: "Roboto";
+  text-align: center;
+}
+
+.p-button {
+  background-color: #E76F51;
+  color: white;
+  border-radius: 10px !important;
+  padding: 8px 32px !important;
+  font-weight: 600 !important;
+}
+
+.p-button:hover {
+  background-color: #D65A3A; 
+  transform: translateY(-2px); 
+  cursor: pointer;
+}
+
+.s-button {
+  border: 2px solid #E76F51;
+  background: transparent;
+  color: #E76F51 !important;
+  border-radius: 10px !important;
+  padding: 8px 32px !important;
+}
+
+.s-button:hover {
+  background: #E76F51;
+  color: white !important;
+}
+
+.card-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card-buttons a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
