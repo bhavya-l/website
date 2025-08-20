@@ -15,8 +15,13 @@ const LandingPage = () => {
       id="Landing"
       className="card"
     >
-      <div id="titleName" className="card-title">
-        Bhavya Lamba
+      <div className="card-content">
+        <div id="titleName" className="card-title">
+          Bhavya Lamba
+        </div>
+        <div id="summary" className="card-description">
+          Software developer and recent graduate from the University of Waterloo, with a passion for learning and solving complex challenges.
+        </div>
       </div>
     </div>
   );

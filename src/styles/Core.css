@@ -27,6 +27,9 @@
 .card-description {
   font-size: 36px;
   max-width: 634px;
+  color: #3D2B1F;
+  font-family: "Roboto";
+  text-align: center;
 }
 
 .p-button {
