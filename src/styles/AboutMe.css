@@ -1,0 +1,54 @@
+.tab-container {
+  display: flex !important;
+  position: relative; /* Needed for absolute positioning of highlight */
+  gap: 0;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  overflow: hidden;
+  width: fit-content;
+  justify-content: flex-start !important;
+  background: #F4A261;
+}
+
+.tab {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2; /* keep text above highlight */
+}
+
+.tab:hover {
+  color: #ffeedd;
+}
+
+.tab.active {
+  color: white;
+  font-weight: 600;
+}
+
+/* The moving highlight bar */
+.tab-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background:#E76F51;
+  border-radius: 25px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.content-text {
+  font-family: "Roboto";
+  font-size: 32px;
+  max-width: 755px;
+  color: #3D2B1F;
+  text-align: left;
+  font-weight: 500;
+}

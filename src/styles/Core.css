@@ -48,12 +48,32 @@
   color: white;
   border-radius: 10px !important;
   padding: 8px 32px !important;
+  font-weight: 600 !important;
+}
+
+.p-button:hover {
+  background-color: #D65A3A; 
+  transform: translateY(-2px); 
+  cursor: pointer;
+}
+
+.s-button {
+  border: 2px solid #E76F51;
+  background: transparent;
+  color: #E76F51 !important;
+  border-radius: 10px !important;
+  padding: 8px 32px !important;
+}
+
+.s-button:hover {
+  background: #E76F51;
+  color: white !important;
 }
 
 .card-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 1rem;
   justify-content: center;
   margin-top: 50px;
 }

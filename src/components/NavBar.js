@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Navbar.css";
 import "../styles/Core.css"
+
 const Navbar = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);

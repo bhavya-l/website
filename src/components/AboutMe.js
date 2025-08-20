@@ -1,48 +1,76 @@
-
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../styles/Core.css";
-import "../styles/Landing.css";
+import "../styles/AboutMe.css";
+import profilePic from "../assets/profilePic.png"
 
 const AboutMe = () => {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const [activeTab, setActiveTab] = useState("About Me");
+  const tabs = ["About Me", "Education", "Skills"];
+  const [highlightStyle, setHighlightStyle] = useState({});
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const buttons = containerRef.current.querySelectorAll(".tab");
+      const activeIndex = tabs.indexOf(activeTab);
+      const activeButton = buttons[activeIndex];
+
+      if (activeButton) {
+        setHighlightStyle({
+          width: `${activeButton.offsetWidth}px`,
+          transform: `translateX(${activeButton.offsetLeft}px)`,
+        });
+      }
     }
-  };
+  }, [activeTab]);
 
   return (
-    <div
-      id="Landing"
-      className="card"
-    >
+    <div id="about" className="card">
       <div className="card-content">
         <div id="aboutme" className="card-subheading">
           About Me
         </div>
-        <div id="summary" className="card-description">
-          Software developer and recent graduate from the University of Waterloo, with a passion for learning and solving complex challenges.
+        <div className="tab-container" ref={containerRef}>
+          <div className="tab-highlight" style={highlightStyle}></div>
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              className={`tab ${activeTab === tab ? "active" : ""}`}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tab}
+            </button>
+          ))}
         </div>
-        <div className = "card-buttons">
-            <a href="/resume.pdf" download className="p-button">
-              Resume
-            </a>
-            <a
-              href="https://github.com/bhavya-l"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-button"
-            >
-              Github
-            </a>
-            <a
-              href="https://www.linkedin.com/in/bhavyalamba"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-button"
-            >
-              Linkedin
-            </a>
+        <div>
+          {activeTab === 'About Me' && (
+            <div className="content-text">
+              <p>
+                Hello, my name is Bhavya and I am a developer who
+                enjoys building thoughtful, user-focused software.
+                I've worked across the stack, from writing Python
+                APIs and integrating monitoring tools to designing
+                clean, responsive front ends with React and Vue.
+              </p>
+
+              <p>
+                I care about clean code, clear communication, and
+                creating things that make life a little easier (or at
+                least less annoying).
+              </p>
+
+              <p>
+                When I'm not coding, I'm usually learning something
+                new, going on runs, rock climbing, or trying to get
+                better at photography and art.
+              </p>
+            </div>
+          )}
+        </div>
+        <div>
+          <div className="profile-pic">
+            <img src={profilePic} alt="Profile Pic" className="profile-image" />
+          </div>
         </div>
       </div>
     </div>
