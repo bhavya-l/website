@@ -18,7 +18,7 @@ const Navbar = () => {
         <li><a href="#about">About Me</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact" class="p-button">Get in Touch</a></li>
+        <li><a href="mailto:bhavyalamba56@gmail.com" class="p-button">Get in Touch</a></li>
       </ul>
     </nav>
   );
