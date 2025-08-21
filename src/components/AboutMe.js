@@ -42,7 +42,7 @@ const AboutMe = () => {
             </button>
           ))}
         </div>
-        <div>
+        <div className="sections">
           {activeTab === 'About Me' && (
             <div className="content-text">
               <p>
@@ -66,13 +66,22 @@ const AboutMe = () => {
               </p>
             </div>
           )}
-        </div>
+
+          {activeTab === 'Education' && (
+            <div className="content-text">
+              <p>
+                I graduated from the University of Waterloo in June, 2025.
+              </p>
+            </div>
+          )}
         <div>
           <div className="profile-pic">
             <img src={profilePic} alt="Profile Pic" className="profile-image" />
           </div>
         </div>
       </div>
+
+        </div>
     </div>
   );
 };
