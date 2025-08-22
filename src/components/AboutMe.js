@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import "../styles/Core.css";
 import "../styles/AboutMe.css";
 import profilePic from "../assets/profilePic.png"
+import LogoLoop from '../Reactbits/Animations/LogoLoop/LogoLoop.jsx';
+import { Slider } from '@mantine/core';
 
 const AboutMe = () => {
   const [activeTab, setActiveTab] = useState("About Me");
@@ -72,6 +74,36 @@ const AboutMe = () => {
               <p>
                 I graduated from the University of Waterloo in June, 2025.
               </p>
+            </div>
+          )}
+
+          {activeTab === 'Skills' && (
+            <div className="content-text">
+              <span>
+                <p style={{fontSize: "24px", marginBottom: "4px"}}>Python</p>
+                <Slider color="#fff" defaultValue={60} disabled />
+              </span>
+
+              <span>
+                <p style={{fontSize: "24px", marginBottom: "4px"}}>Javascript/HTML/CSS</p>
+                <Slider color="#fff" defaultValue={60} disabled />
+              </span>
+              <span>
+                <p style={{fontSize: "24px", marginBottom: "4px"}}>SQL</p>
+                <Slider color="#fff" defaultValue={60} disabled />
+              </span>
+              <span>
+                <p style={{fontSize: "24px", marginBottom: "4px"}}>Frontend Frameworks (React, Vue, Flutter</p>
+                <Slider color="#fff" defaultValue={60} disabled />
+              </span>
+              <span>
+                <p style={{fontSize: "24px", marginBottom: "4px"}}>C#</p>
+                <Slider color="#fff" defaultValue={60} disabled />
+              </span>
+              <span>
+                <p style={{fontSize: "24px", marginBottom: "4px"}}>Java</p>
+                <Slider color="#fff" defaultValue={60} disabled />
+              </span>
             </div>
           )}
         <div>

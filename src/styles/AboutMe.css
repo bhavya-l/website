@@ -47,7 +47,7 @@
 .content-text {
   font-family: "Roboto";
   font-size: 32px;
-  max-width: 755px;
+  width: 100%;
   color: #3D2B1F;
   text-align: left;
   font-weight: 500;
@@ -56,4 +56,9 @@
 .sections {
   display: flex;
   flex-direction: row;
+  gap: 200px;
+}
+
+.profile-image {
+  padding-top: 50px;
 }
