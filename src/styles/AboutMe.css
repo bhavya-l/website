@@ -20,7 +20,8 @@
   cursor: pointer;
   transition: color 0.3s ease;
   position: relative;
-  z-index: 2; /* keep text above highlight */
+  z-index: 2;  
+  font-family: "Roboto"
 }
 
 .tab:hover {
@@ -46,7 +47,7 @@
 
 .content-text {
   font-family: "Roboto";
-  font-size: 32px;
+  font-size: 24px;
   width: 100%;
   color: #3D2B1F;
   text-align: left;

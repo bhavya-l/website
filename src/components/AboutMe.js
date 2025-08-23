@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import "../styles/Core.css";
 import "../styles/AboutMe.css";
 import profilePic from "../assets/profilePic.png"
@@ -10,6 +10,9 @@ const AboutMe = () => {
   const tabs = ["About Me", "Education", "Skills"];
   const [highlightStyle, setHighlightStyle] = useState({});
   const containerRef = useRef(null);
+
+  const skills = [["Python", 90], ["Javascript/HTML/CSS", 95], ["SQL", 80],
+  ["Frontend Frameworks (React, Vue, Flutter)", 90], ["C#", 60], ["Java", 50]]
 
   useEffect(() => {
     if (containerRef.current) {
@@ -78,42 +81,23 @@ const AboutMe = () => {
           )}
 
           {activeTab === 'Skills' && (
-            <div className="content-text">
-              <span>
-                <p style={{fontSize: "24px", marginBottom: "4px"}}>Python</p>
-                <Slider color="#fff" defaultValue={60} disabled />
-              </span>
-
-              <span>
-                <p style={{fontSize: "24px", marginBottom: "4px"}}>Javascript/HTML/CSS</p>
-                <Slider color="#fff" defaultValue={60} disabled />
-              </span>
-              <span>
-                <p style={{fontSize: "24px", marginBottom: "4px"}}>SQL</p>
-                <Slider color="#fff" defaultValue={60} disabled />
-              </span>
-              <span>
-                <p style={{fontSize: "24px", marginBottom: "4px"}}>Frontend Frameworks (React, Vue, Flutter</p>
-                <Slider color="#fff" defaultValue={60} disabled />
-              </span>
-              <span>
-                <p style={{fontSize: "24px", marginBottom: "4px"}}>C#</p>
-                <Slider color="#fff" defaultValue={60} disabled />
-              </span>
-              <span>
-                <p style={{fontSize: "24px", marginBottom: "4px"}}>Java</p>
-                <Slider color="#fff" defaultValue={60} disabled />
-              </span>
+            <div className='content-text'>
+              {skills.map(([lang, lvl]) => (
+                <span>
+                  <p style={{ fontSize: "24px", marginBottom: "4px" }}>{lang}</p>
+                  <Slider color="#2A9D8F" value={lvl} label={null} />
+                </span>
+              ))}
             </div>
           )}
-        <div>
-          <div className="profile-pic">
-            <img src={profilePic} alt="Profile Pic" className="profile-image" />
+          <div>
+            <div className="profile-pic">
+              <img src={profilePic} alt="Profile Pic" className="profile-image" />
+            </div>
           </div>
         </div>
-      </div>
 
-        </div>
+      </div>
     </div>
   );
 };
