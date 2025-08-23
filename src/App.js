@@ -2,6 +2,7 @@ import LandingPage from "./components/Landing.js";
 import { useState, useEffect } from "react";
 import Navbar from "./components/NavBar.js";
 import AboutMe from "./components/AboutMe.js";
+import Experience from './components/Experience.js'
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <PageSection><LandingPage /></PageSection>
       <PageSection><AboutMe /></PageSection>
+      <PageSection><Experience /></PageSection>
     </MantineProvider>
   );
 }
