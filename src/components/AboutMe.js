@@ -4,12 +4,26 @@ import "../styles/AboutMe.css";
 import profilePic from "../assets/profilePic.png"
 import LogoLoop from '../Reactbits/Animations/LogoLoop/LogoLoop.jsx';
 import { Slider } from '@mantine/core';
+import { SiReact, SiTypescript, SiKotlin, SiPython, SiVuedotjs, SiFlutter, SiDocker, SiGit } from 'react-icons/si';
+import { FaJava } from "react-icons/fa";
 
 const AboutMe = () => {
   const [activeTab, setActiveTab] = useState("About Me");
   const tabs = ["About Me", "Education", "Skills"];
   const [highlightStyle, setHighlightStyle] = useState({});
   const containerRef = useRef(null);
+
+  const techLogos = [
+    { node: <SiReact />, title: "React", color: "#E76F51" },
+    { node: <FaJava />, title: "Java", color: "#E76F51" },
+    { node: <SiTypescript />, title: "TypeScript", color: "#E76F51" },
+    { node: <SiKotlin />, title: "Kotlin", color: "#E76F51" },
+    { node: <SiPython />, title: "Python", color: "#E76F51" },
+    { node: <SiVuedotjs />, title: "Vue", color: "#E76F51" },
+    { node: <SiDocker />, title: "Docker", color: "#E76F51" },
+    { node: <SiFlutter />, title: "Flutter", color: "#E76F51" },
+    { node: <SiGit />, title: "Git", color: "#E76F51" },
+  ];
 
   const skills = [["Python", 90], ["Javascript/HTML/CSS", 95], ["SQL", 80],
   ["Frontend Frameworks (React, Vue, Flutter)", 90], ["C#", 60], ["Java", 50]]
@@ -75,7 +89,7 @@ const AboutMe = () => {
           {activeTab === 'Education' && (
             <div className="content-text">
               <p>
-                I graduated from the University of Waterloo in June, 2025.
+                I graduated from the University of Waterloo in June, 2025 with a Bachelor of Computer Science degree.
               </p>
             </div>
           )}
@@ -88,6 +102,19 @@ const AboutMe = () => {
                   <Slider color="#2A9D8F" value={lvl} label={null} />
                 </span>
               ))}
+              <LogoLoop
+                logos={techLogos}
+                speed={120}
+                direction="left"
+                logoHeight={48}
+                gap={40}
+                pauseOnHover
+                scaleOnHover
+                fadeOut
+                fadeOutColor="#ffffff"
+                ariaLabel="Technology partners"
+                style={{ paddingTop: "50px" }}
+              />
             </div>
           )}
           <div>

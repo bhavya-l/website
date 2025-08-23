@@ -48,10 +48,20 @@
 .content-text {
   font-family: "Roboto";
   font-size: 24px;
-  width: 100%;
+  width: 70%;
   color: #3D2B1F;
   text-align: left;
   font-weight: 500;
+}
+
+.content-text ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.content-text svg {
+  color: #E76F51;
 }
 
 .sections {
