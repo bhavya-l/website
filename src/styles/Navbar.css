@@ -1,11 +1,12 @@
 .navbar {
   background-color: #2A9D8F;
   height: 87px;
-  position: relative;
+  position: fixed;
   width: 100%;
   align-items: center;
   justify-content: center;
   display: flex;
+  top: 0;
 }
 
 .nav-links {

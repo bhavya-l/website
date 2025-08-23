@@ -111,7 +111,7 @@ const AboutMe = () => {
                 pauseOnHover
                 scaleOnHover
                 fadeOut
-                fadeOutColor="#ffffff"
+                fadeOutColor="#FDF6E3"
                 ariaLabel="Technology partners"
                 style={{ paddingTop: "50px" }}
               />

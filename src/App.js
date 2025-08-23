@@ -7,16 +7,18 @@ import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 
 function PageSection({ children }) {
-  return <div style={{ margin: "8rem 0" }}>{children}</div>;
+  return <div>{children}</div>;
 }
 
 function App() {
   return (
     <MantineProvider>
-      <Navbar />
-      <PageSection><LandingPage /></PageSection>
-      <PageSection><AboutMe /></PageSection>
-      <PageSection><Experience /></PageSection>
+      <div style={{ backgroundColor: "#FDF6E3" }}>
+        <Navbar />
+        <PageSection><LandingPage /></PageSection>
+        <PageSection><AboutMe /></PageSection>
+        <PageSection><Experience /></PageSection>
+      </div>
     </MantineProvider>
   );
 }
