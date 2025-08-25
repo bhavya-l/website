@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/NavBar.js";
 import AboutMe from "./components/AboutMe.js";
 import Experience from './components/Experience.js'
+import Projects from './components/Projects.js'
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 
@@ -18,6 +19,7 @@ function App() {
         <PageSection><LandingPage /></PageSection>
         <PageSection><AboutMe /></PageSection>
         <PageSection><Experience /></PageSection>
+        <PageSection><Projects /></PageSection>
       </div>
     </MantineProvider>
   );
