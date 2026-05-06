@@ -44,7 +44,7 @@ function ProjectCard({ project, index }) {
               <span key={t} className="proj-card__tech-item">{t}</span>
             ))}
           </div>
-          <a href={project.link} className="proj-card__link">View →</a>
+          {project.link && <a href={project.link} className="proj-card__link">View →</a>}
         </div>
       </div>
     </article>

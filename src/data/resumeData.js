@@ -87,7 +87,6 @@ export const projects = [
     description:
       "A phone callable chemical safety assistant. Uses 250 real SDS documents to find correct product and accurate recovery information within 1-2s.",
     tech: ["Python", "Express", "VAPI/Twilio", "OpenAI API", "Docker Compose"],
-    link: "https://github.com/aperalta03/sds-voice-agent/tree/main",
     color: "#F7C948",
     textColor: "#1a1a1a",
     shape: "circle",
@@ -113,7 +112,6 @@ export const projects = [
     description:
       "A web app designed to look like a standard LLM chat with enhanced features including text coloring corresponding to LLM confidence in token generation, a tree diagram showcasing possible paths during token generation, and a histogram showing possible tokens for that space.",
     tech: ["React", "Python", "Ollama"],
-    link: "https://github.com/bhavya-l/MoodTracker",
     color: "#2BC016",
     textColor: "#fff",
     shape: "square",
@@ -126,7 +124,7 @@ export const projects = [
     description:
       "An AI-powered voice agent that schedules medical appointments for the caller. Retrieves their contact information and reason for visit then finds a suitable doctor and time and confirms with caller. Sends a confirmation email with the details all within the duration of the phone call.",
     tech: ["Python", "Twilio", "Pipecat", "OpenAI API"],
-    link: "#",
+    link: "https://github.com/bhavya-l/AI-Phone-Assistant",
     color: "#ffafcc",
     textColor: "#fff",
     shape: "triangle",
@@ -139,7 +137,7 @@ export const projects = [
     description:
       "A mobile app designed for pet owners or sitters to coordinate with one another to make booking/finding a sitter easy and simple. Creates a profile per pet, making sharing information like medicine, feeding habits, and insurance easy and intuitive.",
     tech: ["Kotlin", "Firebase", "Express", "JavaScript"],
-    link: "#",
+    link: "https://github.com/soham06/team08-PetPal",
     color: "#D8315B",
     textColor: "#fff",
     shape: "diamond",
