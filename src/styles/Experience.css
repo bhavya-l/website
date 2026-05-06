@@ -228,7 +228,24 @@
 }
 
 @media (max-width: 900px) {
-  .experience__layout { grid-template-columns: 1fr; }
-  .experience__panel { min-height: 0; }
-  .exp-detail { position: relative; }
+  .experience__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .experience__panel {
+    min-height: 0;
+  }
+
+  .exp-detail {
+    position: relative;
+    inset: auto;
+    display: none;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .exp-detail--visible {
+    display: block;
+  }
 }

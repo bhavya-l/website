@@ -58,7 +58,7 @@ export const experience = [
     period: "Jan. 2022 - April 2022",
     color: "#004F96",
     bg: "#e1f1ff",
-    index: "03",
+    index: "04",
     description:
       "Developed and launched a responsive careers webpage using HTML/CSS, increasing job application completions shortly after release. Automated repetitive administrative workflows with Power Automate, saving several hours of manual work each week. Helped streamline internal processes while improving user-facing functionality.",
     tags: ["TypeScript", "WebGL", "Canvas API", "Rust (WASM)"],
@@ -70,7 +70,7 @@ export const experience = [
     period: "May. 2021 - Aug. 2021",
     color: "#E2776E",
     bg: "#ffefee",
-    index: "03",
+    index: "05",
     description:
       "Revised and updated the company’s Wikipedia pages to align with a redesigned website, improving public perception and brand consistency. Enhanced website usability by adding features like tooltips and FAQ pages while also publishing multiple blog posts. Increased visibility and engagement by optimizing blog content using SEO best practices.",
     tags: ["TypeScript", "WebGL", "Canvas API", "Rust (WASM)"],
