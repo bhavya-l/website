@@ -1,28 +1,30 @@
-import LandingPage from "./components/Landing.js";
-import { useState, useEffect } from "react";
-import Navbar from "./components/NavBar.js";
-import AboutMe from "./components/AboutMe.js";
-import Experience from './components/Experience.js'
-import Projects from './components/Projects.js'
-import '@mantine/core/styles.css';
-import { MantineProvider } from '@mantine/core';
+import React from 'react';
+import './styles/globals.css';
 
-function PageSection({ children }) {
-  return <div>{children}</div>;
-}
+import Navbar    from './components/Navbar';
+import Hero      from './components/Hero';
+import About     from './components/About';
+import Experience from './components/Experience';
+import Projects  from './components/Projects';
+import Skills    from './components/Skills';
+import Education from './components/Education';
+import Contact   from './components/Contact';
+import Footer    from './components/Footer';
 
-function App() {
+export default function App() {
   return (
-    <MantineProvider>
-      <div style={{ backgroundColor: "#FDF6E3" }}>
-        <Navbar />
-        <PageSection><LandingPage /></PageSection>
-        <PageSection><AboutMe /></PageSection>
-        <PageSection><Experience /></PageSection>
-        <PageSection><Projects /></PageSection>
-      </div>
-    </MantineProvider>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
-
-export default App;

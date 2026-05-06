@@ -1,110 +1,78 @@
-import "../styles/Core.css";
-import { BadgeCard } from "./BadgeCard";
-import { SiReact, SiTypescript, SiKotlin, SiPython, SiDart, SiJavascript, SiFlutter } from 'react-icons/si';
-import { FaJava, FaCss3, FaHtml5, FaNode } from "react-icons/fa";
-import { RiFirebaseFill } from "react-icons/ri"
-import { Carousel } from "@mantine/carousel";
-import "@mantine/carousel/styles.css";
-import { Card } from "@mantine/core";
+import React, { useState } from 'react';
+import { projects } from '../data/resumeData';
+import useInView from '../hooks/useInView';
+import '../styles/Projects.css';
 
-const Projects = () => {
-  const projects = [
-    {
-      image: 'https://images.unsplash.com/photo-1525598912003-663126343e1f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'AI Phone Bot',
-      description: 'An AI Phone Bot using the Pipecat framework alongside Twilio API, integrating TTS, STT, and an LLM, and deployed on Render for on-demand access',
-      badges: [
-        { emoji: <SiPython size={16} />, label: 'Python' },
-      ],
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'PetPal: A Pet Care App',
-      description: 'A full stack mobile app for pet management, sitter matching, and pet info storage. Implemented real-time updates for pet sitter appointments and backend APIs to support multi-user coordination',
-      badges: [
-        { emoji: <SiKotlin size={16} />, label: 'Kotlin' },
-        { emoji: <RiFirebaseFill size={16} />, label: 'Firebase' },
-        { emoji: <SiJavascript size={16} />, label: 'Javascript' },
-        { emoji: <FaNode size={16} />, label: 'Nodejs' },
-      ],
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1652451764453-eff80b50f736?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'Wordle Clone',
-      description: 'A wordle clone with letter-matching, word generation, and a win-lose system.',
-      badges: [
-        { emoji: <SiFlutter size={16} />, label: 'Flutter' },
-        { emoji: <SiDart size={16} />, label: 'Dart' },
-      ],
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'Canvas App',
-      description: 'A collaborative real-time drawing app with WebSockets to enable multiple users to simultaneously draw and see each other\'s cursor positions and drawings in real-time on a shared canvas. ',
-      badges: [
-        { emoji: <SiReact size={16} />, label: 'React' },
-        { emoji: <SiTypescript size={16} />, label: 'TypeScript' },
-        { emoji: <FaCss3 size={16} />, label: 'CSS' },
-        { emoji: <FaHtml5 size={16} />, label: 'HTML' },
-        { emoji: <FaNode size={16} />, label: 'Nodejs' },
-      ],
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1568716353609-12ddc5c67f04?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'Compiler',
-      description: 'A compiler for the Lox language made through following the book Crafting Interpreters.',
-      badges: [
-        { emoji: <FaJava size={16} />, label: 'Java' },
-      ],
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'Website',
-      description: 'The website you are on now!',
-      badges: [
-        { emoji: <SiReact size={16} />, label: 'React' },
-        { emoji: <SiJavascript size={16} />, label: 'Javascript' },
-      ],
-    }
-  ]
-  return (
-    <div id="projects" className="card" style={{ paddingBottom: "500px" }}>
-      <div className="card-content">
-        <div className="card-subheading">Projects</div>
-        <Carousel
-          slideSize="100%"
-          align="center"
-          slidesToScroll={1}
-          loop
-          withIndicators
-          controlSize={48}
-          controlsOffset="1px"
-        >
-          {projects.map((project, index) => (
-            <Carousel.Slide key={index}>
-              <Card
-                padding="xl"
-                radius="md"
-                style={{
-                  minHeight: "300px",
-                  paddingLeft: "3.5rem",
-                  paddingRight: "3.5rem",
-                }}
-              >
-                <BadgeCard
-                  key={index}
-                  image={project.image}
-                  title={project.title}
-                  description={project.description}
-                  badges={project.badges}
-                />
-              </Card>
-            </Carousel.Slide>
-          ))}
-        </Carousel>
-      </div>
-    </div>
-  );
+const SHAPES = {
+  circle:   <circle cx="40" cy="40" r="36" />,
+  square:   <rect x="6" y="6" width="68" height="68" rx="8" />,
+  triangle: <polygon points="40,6 74,70 6,70" />,
+  diamond:  <polygon points="40,4 76,40 40,76 4,40" />,
 };
 
-export default Projects;
+function ProjectCard({ project, index }) {
+  const [ref, inView] = useInView();
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <article
+      ref={ref}
+      className={`proj-card reveal reveal-delay-${(index % 4) + 1} ${inView ? 'visible' : ''}`}
+      style={{ '--proj-color': project.color, '--proj-text': project.textColor }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div className="proj-card__color-block">
+        <svg className="proj-card__shape" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {React.cloneElement(SHAPES[project.shape], {
+            fill: 'rgba(255,255,255,0.25)',
+            stroke: 'rgba(255,255,255,0.5)',
+            strokeWidth: 1.5
+          })}
+        </svg>
+        <span className="proj-card__year">{project.year}</span>
+      </div>
+
+      <div className="proj-card__body">
+        <h3 className="proj-card__name">{project.name}</h3>
+        <p className="proj-card__tagline">{project.tagline}</p>
+        <p className="proj-card__desc">{project.description}</p>
+
+        <div className="proj-card__footer">
+          <div className="proj-card__tech">
+            {project.tech.map(t => (
+              <span key={t} className="proj-card__tech-item">{t}</span>
+            ))}
+          </div>
+          <a href={project.link} className="proj-card__link">View →</a>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+export default function Projects() {
+  const [ref, inView] = useInView();
+
+  return (
+    <section id="projects" className="projects section-wrap">
+      <div className="container">
+        <div className="projects__head" ref={ref}>
+          <span className="eyebrow">Selected work</span>
+          <div className="projects__head-row">
+            <h2 className={`section-heading reveal ${inView ? 'visible' : ''}`}>
+              Things I've<br /><em>built & shipped.</em>
+            </h2>
+            <p className={`projects__sub reveal reveal-delay-2 ${inView ? 'visible' : ''}`}>
+              A selection of side projects and experiments that I'm proud of.
+            </p>
+          </div>
+        </div>
+
+        <div className="projects__grid">
+          {projects.map((p, i) => <ProjectCard key={p.id} project={p} index={i} />)}
+        </div>
+      </div>
+    </section>
+  );
+}
