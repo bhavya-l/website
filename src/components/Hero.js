@@ -29,7 +29,7 @@ export default function Hero() {
       <div className="hero__shape hero__shape--square" />
       <div className="hero__shape hero__shape--dot-grid" />
 
-      <div className="container hero__content">
+      <div className="container hero__content"> 
         {/* Giant name */}
         <h1 className="hero__name">
           <span ref={firstRef} className="hero__name-row hero__name-first">
