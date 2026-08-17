@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/globals.css';
 
-import Navbar    from './components/Navbar';
+import Navbar    from './components/NavBar';
 import Hero      from './components/Hero';
 import About     from './components/About';
 import Experience from './components/Experience';

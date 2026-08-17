@@ -30,12 +30,6 @@ export default function Hero() {
       <div className="hero__shape hero__shape--dot-grid" />
 
       <div className="container hero__content">
-        {/* Status badge */}
-        <div className="hero__badge">
-          <span className="hero__badge-dot" />
-          <span>Open to opportunities · {personalInfo.location}</span>
-        </div>
-
         {/* Giant name */}
         <h1 className="hero__name">
           <span ref={firstRef} className="hero__name-row hero__name-first">
